@@ -1,0 +1,34 @@
+import java.util.Scanner;
+ 
+public class PigLatin {
+  
+  public static void main (String[] args)
+  {
+  System.out.println("Enter your name");
+  Scanner scan = new Scanner(System.in);
+  String name = scan.nextLine();
+  System.out.println("Enter your last name");
+  String lastName = scan.nextLine();
+  
+  name = name.toLowerCase();
+  String firstLetter = name.substring(0,1);
+  String pigLetter = firstLetter.concat("ay");
+  String restOfName = name.substring(2);
+  String restOfNameFirstCap = name.substring(1,2).toUpperCase();
+  String result1 = restOfNameFirstCap.concat(restOfName);
+  result1 = result1.concat(pigLetter);
+    {
+  lastName = lastName.toLowerCase();
+  String firstLetter1 = lastName.substring(0,1);
+  String pigLetter1 = firstLetter1.concat("ay");
+  String restOfName1 = lastName.substring(2);
+  String restOfNameFirstCap1 = lastName.substring(1,2).toUpperCase();
+  String result2 = restOfNameFirstCap1.concat(restOfName1);
+  result2 = result2.concat(pigLetter1);
+    
+  System.out.println("Your name in pig latin is:");
+  System.out.println(result1 + " " + result2);
+    }
+    
+  }
+}
